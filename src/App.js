@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
+import DeleteIcon from '@mui/icons-material/Delete';
+import SendIcon from '@mui/icons-material/Send';
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Stack direction={'row'} spacing={5} paddingTop={15} paddingLeft={50}>
+        <Button variant={'text'}>click</Button>
+        <Button variant={'contained'}>contained </Button>
+        <Button variant={'outlined'}>outlined</Button>
+        <Button disable>disable</Button>
+        <Button variant={'outlined'} startIcon={<DeleteIcon/>}>delete</Button>
+        <Button variant={'outlined'} startIcon={<SendIcon/>}>send</Button>
+      </Stack>
     </div>
   );
 }
